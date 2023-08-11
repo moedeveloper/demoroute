@@ -1,4 +1,4 @@
-import { Drawer } from '@/src/components/Drawer';
+import { Drawer } from '@/layouts/drawer';
 import { LatestMajlesProvider, useLatestMajlesContext } from '@/src/contexts/LatestMajlesContext';
 import { LatestPoemsProvider, useLatestPoemsContext } from '@/src/contexts/LatestPoemsContext';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
@@ -7,6 +7,7 @@ import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
+import { Tabs } from '@/layouts/tabs';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -62,13 +63,10 @@ function RootLayoutNav() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Drawer screenOptions={{
-        headerTitle: "alfa header"
-      }}>
-        
-      </Drawer>
+      <Drawer />
+      
       {/* <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name='(tabs)' />
       </Stack> */}
     </ThemeProvider>
   );

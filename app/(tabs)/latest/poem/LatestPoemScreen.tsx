@@ -16,7 +16,7 @@ const LatestPoemScreen: React.FC = () => {
   const handlePress = (content: Poem) => {
       Haptics.selectionAsync();
       
-      router.push(`/topTabs/LatestPoemScreen`);
+      router.push(`/`);
   } 
 
   const renderItem = (result: { item: any }) => {
