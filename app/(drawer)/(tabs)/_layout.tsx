@@ -1,18 +1,18 @@
+import { Tabs } from 'expo-router';
 import React from 'react';
 import { View } from 'react-native';
-import { Tabs } from '@/layouts/tabs';
-
 
 export const unstable_settings = {
-  initialRouteName: 'latest',
+  initialRouteName: '/app/(drawer)/(tabs)',
 };
 
 const TabsLayout: React.FC = () => {
   return (
     <Tabs>
-        <Tabs.Screen name='latest' />
-        <Tabs.Screen name='istikhara' />
+      <Tabs.Screen name='latest' />
+      <Tabs.Screen name='istikhara' />
     </Tabs>
+        
   );
 }
 
